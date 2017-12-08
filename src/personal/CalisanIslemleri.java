@@ -11,11 +11,12 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class CalisanIslemleri extends Calisan implements ActionListener {
-    JFrame frames;
-    JTextField calisanAdi, calisanCinsiyet, calisanNo, calisanTipi, calisaniSil;
-    JRadioButton rb3;
-    JButton ekleButton, silButton, listeleButton, geriButton;
-    JLabel ekleBaslik, calisanAdiBasligi, calisanNoBasligi, calisanCinsiyetBasligi, calisanTipiBasligi, silBaslik, calisanSilBasligi;
+    private JFrame frames;
+    private JTextField calisanAdi, calisanCinsiyet, calisanNo, calisanTipi, calisaniSil;
+    private JRadioButton rb3;
+    private JButton ekleButton;
+    private JButton silButton;
+    private JButton geriButton;
     private ArrayList<Calisan> calisanListesi;
 
     public CalisanIslemleri() {
@@ -26,26 +27,26 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         frames = new JFrame("-- MAĞAZAM YÖNETİM SİSTEMİ --");
 
 
-        ekleBaslik = new JLabel("Çalışan Ekleyin");
+        JLabel ekleBaslik = new JLabel("Çalışan Ekleyin");
         ekleBaslik.setBounds(50, 15, 250, 35);
         frames.add(ekleBaslik);
 
 
-        calisanAdiBasligi = new JLabel("Çalışan Adı");
+        JLabel calisanAdiBasligi = new JLabel("Çalışan Adı");
         calisanAdiBasligi.setBounds(50, 35, 250, 35);
 
         calisanAdi = new JTextField("");
         calisanAdi.setBounds(50, 60, 250, 35);
         frames.add(calisanAdi);
 
-        calisanCinsiyetBasligi = new JLabel("Çalışan Cinsiyetini Girin");
+        JLabel calisanCinsiyetBasligi = new JLabel("Çalışan Cinsiyetini Girin");
         calisanCinsiyetBasligi.setBounds(50, 95, 250, 35);
 
         calisanCinsiyet = new JTextField("");
         calisanCinsiyet.setBounds(50, 120, 250, 35);
         frames.add(calisanCinsiyet);
 
-        calisanNoBasligi = new JLabel("Çalışan No");
+        JLabel calisanNoBasligi = new JLabel("Çalışan No");
         calisanNoBasligi.setBounds(50, 155, 250, 35);
 
         calisanNo = new JTextField("");
@@ -53,18 +54,18 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         frames.add(calisanNo);
 
 
-        calisanTipiBasligi = new JLabel("Çalışan Tipi");
+        JLabel calisanTipiBasligi = new JLabel("Çalışan Tipi");
         calisanTipiBasligi.setBounds(50, 225, 250, 35);
 
         calisanTipi = new JTextField("");
         calisanTipi.setBounds(50, 255, 250, 35);
         frames.add(calisanTipi);
         ///////////////////////////////////////////////////////
-        silBaslik = new JLabel("Çalışan Silin");
+        JLabel silBaslik = new JLabel("Çalışan Silin");
         silBaslik.setBounds(400, 15, 250, 35);
         frames.add(silBaslik);
 
-        calisanSilBasligi = new JLabel("Çalışan Numarasıyla Silin");
+        JLabel calisanSilBasligi = new JLabel("Çalışan Numarasıyla Silin");
         calisanSilBasligi.setBounds(400, 95, 250, 35);
 
         calisaniSil = new JTextField("");
@@ -79,7 +80,7 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         ButtonGroup bg = new ButtonGroup();
         bg.add(rb3);
 
-        listeleButton = new JButton("Uygula");
+        JButton listeleButton = new JButton("Uygula");
         listeleButton.setBounds(750, 295, 250, 35);
         frames.add(listeleButton);
 
@@ -189,6 +190,5 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         } else if (e.getSource() == geriButton) {
             geriButtonEvent();
         }
-
     }
 }
