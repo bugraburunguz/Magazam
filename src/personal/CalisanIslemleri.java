@@ -60,7 +60,7 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         calisanTipi = new JTextField("");
         calisanTipi.setBounds(50, 255, 250, 35);
         frames.add(calisanTipi);
-        ///////////////////////////////////////////////////////
+
         JLabel silBaslik = new JLabel("Çalışan Silin");
         silBaslik.setBounds(400, 15, 250, 35);
         frames.add(silBaslik);
@@ -71,7 +71,7 @@ public class CalisanIslemleri extends Calisan implements ActionListener {
         calisaniSil = new JTextField("");
         calisaniSil.setBounds(400, 120, 250, 35);
         frames.add(calisaniSil);
-        ////////////////////////////////////////////////////
+
 
         rb3 = new JRadioButton(" Listele");
         rb3.setBounds(750, 190, 300, 30);
