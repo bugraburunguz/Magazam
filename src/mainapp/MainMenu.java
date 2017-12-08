@@ -1,15 +1,27 @@
+package mainapp;
+
 import personal.CalisanIslemleri;
-import stok.StokIslemleri;
+import stok.UrunIslemleri;
 
 import javax.swing.*;
 
 public class MainMenu {
+
+    public MainMenu() {
+
+    }
+
     public static void main(String[] args) {
+
+        createFrame();
+    }
+
+    public static void createFrame() {
 
         JFrame frames;
         JLabel label1, label2;
         JRadioButton rb1, rb2, rb3;
-        JButton butto1;
+        JButton button1;
 
         frames = new JFrame("Mağazam Yönetim Sistemi");
 
@@ -38,15 +50,15 @@ public class MainMenu {
         bg.add(rb2);
         bg.add(rb3);
 
-        butto1 = new JButton("Git");
-        butto1.setBounds(500, 230, 200, 50);
-        frames.add(butto1);
+        button1 = new JButton("Git");
+        button1.setBounds(500, 230, 200, 50);
+        frames.add(button1);
 
-        frames.setSize(1200, 800);
+        frames.setSize(1024, 768);
         frames.setLayout(null);
         frames.setVisible(true);
 
-        butto1.addActionListener(e -> {
+        button1.addActionListener(e -> {
 
             if (bg.isSelected(null)) {
                 JOptionPane.showMessageDialog(null, "Lütfen Seçim Yapınız");
@@ -56,7 +68,7 @@ public class MainMenu {
                 frames.setVisible(false);
 
             } else if (rb2.isSelected()) {
-                new StokIslemleri();
+                new UrunIslemleri();
                 frames.setVisible(false);
 
             } else if (rb3.isSelected()) {
@@ -65,5 +77,4 @@ public class MainMenu {
             }
         });
     }
-
 }
